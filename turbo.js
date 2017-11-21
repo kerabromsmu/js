@@ -76,6 +76,10 @@
 	"  return texture2D(u_texture, pos);\n" +
 	"}\n" +
 	"\n" +
+	"vec4 readOffset(int offX, int offY) {\n" +
+	"  return texture2D(u_texture, pos+vec2(offX,offY));\n" +
+	"}\n" +
+	"\n" +
 	"void commit(vec4 val) {\n" +
 	"  gl_FragColor = val;\n" +
 	"}\n" +
